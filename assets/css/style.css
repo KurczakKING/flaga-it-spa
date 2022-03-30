@@ -1,7 +1,7 @@
-h1 {
+h1, p {
     color: palevioletred;
 }
 
 body {
-    background-color: black;
+    background-color: gray;
 }
