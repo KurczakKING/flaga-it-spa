@@ -1,14 +1,22 @@
 const express = require("express");
-const port = 3000;
 const app = express();
+const port = require("./config");
+const apiRouter = require("./routes/api");
+app.use("/", apiRouter);
+
+app.listen(port, (error) => {
+  if (error) {
+    return console.log(
+      "Jejda! Serwer NIE działa z powodu błędu ",
+      error,
+      " :("
+    );
+  }
+  console.log("Serwer działa na porcie ", port);
+});
+
 app.set("view engine", "hbs");
 const axios = require("axios");
-
-app.get("/", function (request, response) {
-  response.render("index", {
-    pageTitle: "Witaj w IT SPA!",
-  });
-});
 
 /*app.get("/y", function (request, response) {
   axios
@@ -35,18 +43,8 @@ console.log(data.rooms[0]);
 //const newData = [{}]
 //fs.writeFile("database.json", JSON.stringify())
 
-app.listen(port, (error) => {
-  if (error) {
-    return console.log(
-      "Jejda! Serwer NIE działa z powodu błędu ",
-      error,
-      " :("
-    );
-  }
-  console.log("Serwer działa na porcie ", port);
-});
-
 const path = require("path");
+const { allowedNodeEnvironmentFlags } = require("process");
 app.use("/assets", express.static(path.join(__dirname, "./assets")));
 
 app.use("/src/js", express.static(path.join(__dirname, "./src/js")));

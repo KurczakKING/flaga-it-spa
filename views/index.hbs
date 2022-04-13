@@ -11,16 +11,26 @@
     <section id="demo"></section>
     <section id="data"></section>
 
+    <script>
+      var user = {}
+      user = {'id' : 123, 'name' : 'First Name'}
+      res.render('index', {user : user});
+      Handlebars.registerHelper('json', function(context) {
+    return JSON.stringify(context);
+});
+      myView = new myView({user : {{user}});
+    </script>
+    <h1>{{user.name}}</h1>
+
     <!--
     <input type="text" id="example">
     <button id="action">Klik</button>
     <p id="text"></p>
-
+ <script src="./src/js/Home2.js"></script>
 -->
     <script src="../src/js/functions.js"></script>
     <script type="module" src="./src/js/app.js"></script>
-    <script src="./src/js/Home2.js"></script>
-    <script src="./src/js/Home.js"></script>
+       <script src="./src/js/Home.js"></script>
    
   </body>
 </html>

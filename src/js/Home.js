@@ -15,19 +15,27 @@
 }
 */
 
-
-    
 document.getElementById("demo").innerHTML = `
     <h2>ffffffffffffffffffff</h2>
     <p>ddddddddddddddddddddddddddddddddddddddddddd.</p>
 `;
 
-const main = document.querySelector('main');
-const ggg = document.createElement('h3');
+const main = document.querySelector("main");
+const ggg = document.createElement("h3");
 ggg.innerHTML = `
     gggggggggggggggggggggggggggggggggg
 `;
-main.append(ggg)
+main.append(ggg);
+
+const data = fetch("./views/database.json")
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) {
+    console.log(data.rooms[0]);
+  });
+
+main.append(data);
 
 /*
 const data = require("./views/database.json");
