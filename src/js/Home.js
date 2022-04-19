@@ -1,6 +1,5 @@
 //const Home = () => {
 const main = document.querySelector("main");
-
 const section = document.createElement("section");
 section.innerHTML = `
     <h2>Home</h2>

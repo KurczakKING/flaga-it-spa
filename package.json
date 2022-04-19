@@ -4,22 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "watch": "nodemon --ext *"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",
+    "bootstrap": "^4.6.1",
     "express": "^4.17.3",
-    "express-generator": "^4.16.1",
+    "express-generator": "^4.2.0",
     "express-handlebars": "^6.0.5",
     "express-hbs": "^2.4.0",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "bootstrap": "^3.4.1",
+    "connect-livereload": "^0.6.1",
     "jquery": "^3.6.0",
+    "livereload": "^0.9.3",
     "nodemon": "^2.0.15",
     "popper.js": "^1.16.1"
   }
