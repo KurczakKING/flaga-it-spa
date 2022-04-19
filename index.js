@@ -42,13 +42,14 @@ axios.get('/views/database.json')
 .then(res => console.log(res.data))
 .catch(err => console.log(err))*/
 
-const data = require("./src/database.json");
-console.log(data.rooms[0]);
+//const data = require("./src/database.json");
+//console.log(data.rooms[0]);
+
 //const fs = require("fs");
 //const newData = [{}]
 //fs.writeFile("database.json", JSON.stringify())
 
 const { allowedNodeEnvironmentFlags } = require("process");
 app.use("/assets", express.static(path.join(__dirname, "./assets")));
-
+app.use("/scss", express.static(path.join(__dirname, "./scss")));
 app.use("/src/js", express.static(path.join(__dirname, "./src/js")));

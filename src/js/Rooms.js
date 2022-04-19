@@ -1,9 +1,17 @@
+/*const fs = require("fs");
+var data = fs.readFileSync("data.json");
+var myObject = JSON.parse(data);
+console.log(myObject)*/
+
 const main = document.querySelector("main");
 const section = document.createElement("section");
 section.innerHTML = `
         <h2>Rooms List</h2>
         <header>Loading...</header>
     `;
+
+
+
 
     /*
 fetch("http://localhost:9000/rooms")
