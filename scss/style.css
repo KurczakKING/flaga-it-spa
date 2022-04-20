@@ -1,11 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@400;500&display=swap");
 * {
+  font-family: "Playfair Display", serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
 .nav-link {
+  color: #56ebff !important;
+  font-family: "Lobster", cursive;
   margin-left: 1em;
   margin-right: 1em;
+  font-size: 1.5em;
   font-variant: small-caps; }
   .nav-link:hover {
-    color: red !important; }
+    color: #fd9c2d !important; }
+
+.bg-black {
+  background-color: #000 !important; }
+
+.slider {
+  background: url(../assets/img/spa.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position: 20%;
+  width: 100%; }
+
+.span {
+  font-family: "Lobster", cursive; }

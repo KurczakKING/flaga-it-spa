@@ -1,0 +1,36 @@
+@import "./utils/_variables";
+
+* {
+  font-family: $font-primary;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  color: $color-primary;
+  font-family: $font-secondary;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.bg-black {
+  background-color: $color-black;
+}
+
+.slider {
+  background: url(../assets/img/spa.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position: 20%;
+  width: 100%;
+}
+
+.span {
+  font-family: $font-secondary;
+}
