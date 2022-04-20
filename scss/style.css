@@ -24,6 +24,25 @@
   height: 50vh;
   background-position: 20%;
   width: 100%; }
+  .slider h3 {
+    font-family: "Lobster", cursive;
+    font-size: 2em;
+    font-weight: 700; }
 
-.span {
-  font-family: "Lobster", cursive; }
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: #56ebff !important;
+  color: #000 !important;
+  font-weight: 700;
+  border-radius: 2em; }
+  .btn1:hover {
+    background-color: #fd9c2d !important; }
+
+.card:hover {
+  box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s; }

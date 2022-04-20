@@ -29,8 +29,32 @@
   height: 50vh;
   background-position: 20%;
   width: 100%;
+  h3 {
+    font-family: $font-secondary;
+    font-size: 2em;
+    font-weight: 700;
+    //padding-top: 1em;
+    //padding-left: 3em;
+  }
 }
 
-.span {
-  font-family: $font-secondary;
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: $color-primary;
+  color: $color-black;
+  font-weight: 700;
+  border-radius: 2em;
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+.card:hover {
+  box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
 }
