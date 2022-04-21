@@ -5,9 +5,12 @@
   margin: 0;
   box-sizing: border-box; }
 
-.nav-link {
+.footer, .footer p, .nav-link {
+  background-color: #000 !important;
   color: #56ebff !important;
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", cursive; }
+
+.nav-link {
   margin-left: 1em;
   margin-right: 1em;
   font-size: 1.5em;
@@ -46,3 +49,6 @@
   -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   transition: 0.5s; }
+
+.contact {
+  background: linear-gradient(#fd9c2d 0%, #56ebff 70%); }

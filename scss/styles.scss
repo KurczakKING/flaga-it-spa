@@ -7,9 +7,17 @@
   box-sizing: border-box;
 }
 
-.nav-link {
+.footer {
+  background-color: $color-black;
   color: $color-primary;
   font-family: $font-secondary;
+  p {
+    @extend .footer;
+  }
+}
+
+.nav-link {
+  @extend .footer;
   margin-left: 1em;
   margin-right: 1em;
   font-size: 1.5em;
@@ -57,4 +65,8 @@
   -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   transition: 0.5s;
+}
+
+.contact {
+  background: linear-gradient(#fd9c2d 0%, #56ebff 70%);
 }
