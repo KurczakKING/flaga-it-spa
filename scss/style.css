@@ -52,3 +52,7 @@
 
 .contact {
   background: linear-gradient(#fd9c2d 0%, #56ebff 70%); }
+
+h4 {
+  font-family: "Lobster", cursive;
+  padding-bottom: 0.5em; }

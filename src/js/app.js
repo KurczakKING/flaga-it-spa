@@ -1,5 +1,6 @@
 //import 'bootstrap/dist/css/bootstrap.css';
 //import './it-spa.scss';
+
 const Hom2 = require('./Hom2')
 //import { RoomsList } from './views/RoomsList';
 //import { Nav } from './navigation/Nav';
