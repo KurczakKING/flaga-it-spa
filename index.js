@@ -53,13 +53,49 @@ liveReloadServer.server.once("connection", () => {
 });
 app.use(connectLiveReload());
 
-const bodyparser = require("body-parser");
+const bodyParser = require("body-parser");
 app.use(
-  bodyparser.urlencoded({
-    extended: true,
+  bodyParser.urlencoded({
+    exended: true,
   })
 );
-app.use(bodyparser.json());
+app.use(bodyParser.json());
+
+const session = require("express-session");
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+  })
+);
+
+const expressValidator = require("express-validator");
+app.use(
+  expressValidator({
+    errorFormatter: function (param, msg, value) {
+      const namespace = param.split("."),
+        root = namespace.shift(),
+        formParam = root;
+
+      while (namespace.length) {
+        formParam += "[" + namespace.shift() + "]";
+      }
+      return {
+        param: formParam,
+        msg: msg,
+        value: value,
+      };
+    },
+  })
+);
+
+app.use(require("connect-flash")());
+app.use(function (request, response, next) {
+  response.locals.messages = require("express-messages")(request, response);
+  next();
+}); 
 
 const axios = require("axios");
 /*
