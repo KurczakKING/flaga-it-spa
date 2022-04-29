@@ -56,7 +56,7 @@ app.use(connectLiveReload());
 const bodyParser = require("body-parser");
 app.use(
   bodyParser.urlencoded({
-    exended: true,
+    exended: false,
   })
 );
 app.use(bodyParser.json());

@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 const home = require("./home");
 const rooms = require("./rooms");
 const treatments = require("./treatments");
 const cart = require("./cart");
+
+const users = [];
 
 /*const fs = require('fs');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
@@ -12,8 +15,32 @@ const url = require("../src/database.json");*/
 router.get("/test", function (request, response, next) {
   response.send("test");
 });
-
 router.get("/", home.homepage);
+router.get("/logging", (request, response) => {
+  response.render("logging");
+});
+router.post("/logging", (request, response) => {
+  response.render("logging");
+});
+router.get("/register", (request, response) => {
+  response.render("register");
+});
+router.post("/register", async (request, response) => {
+  try {
+    const hashedPassword = await bcrypt.hash(request.body.password, 10);
+    users.push({
+      id: Date.now().toString(),
+      name: request.body.name,
+      surname: request.body.name,
+      email: request.body.email,
+      password: hashedPassword,
+    });
+    response.redirect("/login");
+  } catch {
+    response.redirect("/register");
+  }
+  console.log(users);
+});
 router.get("/rooms", rooms.homepage);
 /*router.get("/rooms", function (req, res) {
   fetch(url)
@@ -32,6 +59,9 @@ router.get("/cart", cart.homepage);
     pageTitle: "Witaj w IT SPA!",
   });
 });*/
+router.get("/contact", (request, response) => {
+  response.render("contact");
+});
 
 router.post("/", function (request, response) {
   let myJson = request.body; // your JSON

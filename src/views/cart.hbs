@@ -1,6 +1,30 @@
 {{>_head}}
 
-
+<div class="table-responsive-sm m-auto text-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Zamówienie</th>
+                <th>Cena</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each order}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.order}}</td>
+                    <td>{{this.total}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/order/{{this_id}}">Update</a>
+                        <a class="btn btn-danger" href="/order/delete/{{this_id}}">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
 
 <script src="./src/js/Cart.js"></script>
 {{>_foot}}

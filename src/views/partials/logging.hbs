@@ -1,0 +1,48 @@
+<section class="logging">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-6 m-auto text-center">
+        <h1>{{{pageTitle}}}</h1>
+        <h1>Zaloguj się!</h1>
+        <form action="/register" method="POST">
+          <div class="form-outline m-4">
+            <input
+              type="email"
+              id="email"
+              class="form-control bg-light"
+              placeholder="Adres email"
+              required
+            />
+          </div>
+          <div class="form-outline m-4">
+            <input
+              type="password"
+              id="password"
+              class="form-control bg-light"
+              placeholder="Hasło"
+              required
+            />
+          </div>
+          <div class="row m-4">
+            <div class="col d-flex justify-content-center">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="checkbox"
+                  checked
+                />
+                <label class="form-check-label" for="form1Example3">Zapamiętaj</label>
+              </div>
+            </div>
+            <div class="col">
+              <a href="#">Przypomnij hasło</a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn1">Zaloguj mnie</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -56,3 +56,8 @@
 h4 {
   font-family: "Lobster", cursive;
   padding-bottom: 0.5em; }
+
+#register {
+  display: none; }
+  #register.open {
+    display: block; }
