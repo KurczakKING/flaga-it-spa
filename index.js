@@ -38,11 +38,6 @@ db.once("open", function () {
   console.log("Połączenie z MongoDB działa! :)");
 });
 
-/*
-connectDB().catch((error) => console.log(error));
-async function connectDB() {
-  await mongoose.connect("mongodb://localhost/flaga-it-spa");*/
-
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
 const liveReloadServer = livereload.createServer();
@@ -96,16 +91,3 @@ app.use(function (request, response, next) {
   response.locals.messages = require("express-messages")(request, response);
   next();
 }); 
-
-const axios = require("axios");
-/*
-axios.get('/views/database.json')
-.then(res => console.log(res.data))
-.catch(err => console.log(err))*/
-
-//const data = require("./src/database.json");
-//console.log(data.rooms[0]);
-
-//const fs = require("fs");
-//const newData = [{}]
-//fs.writeFile("database.json", JSON.stringify())

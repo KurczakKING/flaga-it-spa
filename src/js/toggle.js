@@ -6,4 +6,4 @@ function toggle(register) {
     else {
         element.style.display = "block";
     }
-} 
+}
