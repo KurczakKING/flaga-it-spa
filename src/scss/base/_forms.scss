@@ -1,0 +1,17 @@
+@import "../utils/_variables";
+
+.contact {
+  background: linear-gradient(#fd9c2d 0%, #56ebff 70%);
+}
+
+h4 {
+  font-family: $font-secondary;
+  padding-bottom: 0.5em;
+}
+
+#register {
+  display: none;
+  &.open {
+    display: block;
+  }
+}

@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = require("./config");
-const apiRouter = require("./routes/api");
+const port = require("./src/config/config");
+const apiRouter = require("./src/server/api");
 app.use("/", apiRouter);
-const adminApi = require("./routes/admin_api");
+const adminApi = require("./src/server/admin_api");
 app.use("/admin/api", adminApi);
 app.listen(port, (error) => {
   if (error) {
@@ -22,8 +22,8 @@ app.set("views", "./src/views");
 app.set("view engine", "hbs");
 hbs.registerPartials(path.join(__dirname, "src/views/partials"), (err) => {});
 
-app.use("/assets", express.static(path.join(__dirname, "./assets")));
-app.use("/scss", express.static(path.join(__dirname, "./scss")));
+app.use("/src/assets", express.static(path.join(__dirname, "./src/assets")));
+app.use("/src/scss", express.static(path.join(__dirname, "./src/scss")));
 app.use("/src/js", express.static(path.join(__dirname, "./src/js")));
 
 const mongoose = require("mongoose");

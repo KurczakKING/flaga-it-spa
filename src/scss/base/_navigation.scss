@@ -1,0 +1,16 @@
+@import "../utils/_variables";
+
+.nav-link {
+  @extend .footer;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.bg-black {
+  background-color: $color-black;
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel start:dev sass:compile",
     "start:dev": "node index.js",
-    "sass:compile": "node-sass --include-path sass scss/index.scss scss/style.css",
+    "sass:compile": "node-sass --include-path sass src/scss/index.scss src/scss/style.css",
     "watch": "nodemon --ext *"
   },
   "keywords": [],

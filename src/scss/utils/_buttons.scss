@@ -1,0 +1,22 @@
+@import "./_variables";
+
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: $color-primary;
+  color: $color-black;
+  font-weight: 700;
+  border-radius: 2em;
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+.card:hover {
+  box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}

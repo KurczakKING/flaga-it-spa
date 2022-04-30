@@ -5,6 +5,17 @@
   margin: 0;
   box-sizing: border-box; }
 
+.slider {
+  background: url(../assets/img/spa.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position: 20%;
+  width: 100%; }
+  .slider h3 {
+    font-family: "Lobster", cursive;
+    font-size: 2em;
+    font-weight: 700; }
+
 .footer, .footer p, .nav-link {
   background-color: #000 !important;
   color: #56ebff !important;
@@ -21,16 +32,17 @@
 .bg-black {
   background-color: #000 !important; }
 
-.slider {
-  background: url(../assets/img/spa.jpg) no-repeat;
-  background-size: cover;
-  height: 50vh;
-  background-position: 20%;
-  width: 100%; }
-  .slider h3 {
-    font-family: "Lobster", cursive;
-    font-size: 2em;
-    font-weight: 700; }
+.contact {
+  background: linear-gradient(#fd9c2d 0%, #56ebff 70%); }
+
+h4 {
+  font-family: "Lobster", cursive;
+  padding-bottom: 0.5em; }
+
+#register {
+  display: none; }
+  #register.open {
+    display: block; }
 
 .btn1 {
   height: 45px;
@@ -49,15 +61,3 @@
   -webkit-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -13px 9px 45px -5px rgba(0, 0, 0, 0.6);
   transition: 0.5s; }
-
-.contact {
-  background: linear-gradient(#fd9c2d 0%, #56ebff 70%); }
-
-h4 {
-  font-family: "Lobster", cursive;
-  padding-bottom: 0.5em; }
-
-#register {
-  display: none; }
-  #register.open {
-    display: block; }

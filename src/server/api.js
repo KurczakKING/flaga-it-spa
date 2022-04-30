@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const home = require("./home");
-const rooms = require("./rooms");
-const treatments = require("./treatments");
-const cart = require("./cart");
+const home = require("./routes/home");
+const rooms = require("./routes/rooms");
+const treatments = require("./routes/treatments");
+const cart = require("./routes/cart");
 
 const users = [];
 

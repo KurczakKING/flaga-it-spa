@@ -1,0 +1,32 @@
+@import "../utils/_variables";
+
+* {
+  font-family: $font-primary;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  background: url(../assets/img/spa.jpg) no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position: 20%;
+  width: 100%;
+  h3 {
+    font-family: $font-secondary;
+    font-size: 2em;
+    font-weight: 700;
+    //padding-top: 1em;
+    //padding-left: 3em;
+  }
+}
+
+.footer {
+  background-color: $color-black;
+  color: $color-primary;
+  font-family: $font-secondary;
+  p {
+    @extend .footer;
+  }
+}

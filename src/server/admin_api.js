@@ -10,9 +10,6 @@ router.get("/test", function (request, response, next) {
 });
 
 router.post("/add-message", function (request, response) {
-  /*const name = "";
-  const surname = "";
-  const message = "";*/
   request.checkBody("name", "Name must have a value".notEmpty());
   request.checkBody("surname", "Surname must have a value".notEmpty());
   request.checkBody("message", "Message must have a value".notEmpty());
